@@ -1,0 +1,18 @@
+from flask import Flask,render_template_string
+app=Flask(__name__)
+@app.route('/')
+def home():
+    html="""
+    <html>
+    <head>
+    </head>
+    <body>
+    <p>welcome to my webdite</p>
+    <a href="tel:01609169615">call me</a>
+    <a href="https://www.facebook.com/profile.php?id=61569471659317&mibextid=ZbWKwL">facebook link</a>
+    </body>
+    </html>"""
+    return render_template_string(html)
+if __name__=='__main__':
+    app.run(debug=True)
+    
